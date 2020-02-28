@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+                <div class="jumbotron mt-2">
+                <h1 class="display-5 text-md-center">Our Mission</h1>
+                </div>
+                    <div class="card-body">
+                      <p class="text-center">
+                        <img src = "../static/images/words.png" alt = "Words" width = "500" height = "350">
+                      <br><br>
+                        <b>Use the capabilities of tensorflow and machine learning to create a generative word model</b>
+                        <br>
+                        <b>Explore the creative writing abilities of computers, and learn the processes for more advanced learning.</b>
+                        <br><br>
+                        We set out to make a natural language generation program using a neural network.  Our aim was to build a corpus of text from a number of types of creative writing that could be used for the program to learn how to produce its own original text.  In our class experience at Georgia Tech, we learned how to make a very basic sentiment analyzer.  We wanted to expand our knowledge of Natural Language Processing and the current techniques and trends to meet our goals.  Along the way, we learned about popular current research, APIs relevant to NLP, data processing, and the hurdles involved in testing and developing working models.
+                      </p>
+  </div>
+    <div class ="row">
+      <div class="col-md-6">
+        <h2>Inspiration</h2>
+        <p><a href="inspiration" class="btn btn-success"> Learn More &raquo;</a></p>
+        </div>
+      <div class="col-md-6 text-md-right">
+        <h2>Data</h2>
+        <p><a href="data" class="btn btn-success"> Learn More &raquo;</a></p>
+        </div>
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+                <div class="jumbotron mt-2">
+                <h1 class="display-5 text-md-center">NLP: Natural Language Generation</h1>
+                <h2 class="display-5 text-md-center">Creative writing with Tensorflow</h2>
+                <hr class="my-5 text-md-center">
+                    <p>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                      {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                          {{  message }}
+                        </div>
+                      {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                    </p>
+</div>
+  <div class ="row">
+    <div class="col-md-4">
+      <h2>Background</h2>
+      <p>Our Mission</p>
+      <p><a href="mission" class="btn btn-success"> Learn More &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Process</h2>
+      <p>Explore our methods and our development process</p>
+      <p><a href="process" class="btn btn-success"> Learn More &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Testing Ground</h2>
+      <p>Play with our application</p>
+      <p><a href="test" class="btn btn-success"> Test &raquo;</a></p>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

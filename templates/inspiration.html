@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron mt-2">
+    <h1 class="display-5 text-md-center">Inspiration</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+        <div class="card-body">
+            <img src = "../static/images/gene1.jpg" alt = "Madverse City" class="rounded float-center" width = "600" height = "339">
+
+            <p class="text-md-justified">
+                <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We were playing the party game Jackbox, and in one particular mini-game, you are asked to create assisted lyrics for a “rap battle”.  If there are an uneven number of participants, the game creates a fictional “robot” character that produces lyrics to compete against an opponent.  This game’s character simply prints lyrics from a database of pre-written lines that the developers entered into its memory.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Despite this not being any sort of learned activity, or data-driven module, it gave us an idea.  We wanted to create an application that could do this on a realistic, and creative level.  We then began to research the current techniques for Natural Language Generation or NLG.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NLG is a subset of NLP.  There is fervent research currently going on in the data community regarding these topics.  Kaggle recently had a competition that coincided with the release of Tensorflow 2.0 that involved answering open ended text questions using Wikipedia as a data source.  We read a number of papers and research blogs about the process required for NLG.  The most popular, and simplest, methods involve what is known as character generation.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Character generation typically requires a corpus of input text that is then converted into individual text characters that are then converted into integers.  The series of the characters are fed into a neural network, most commonly using LSTM nodes, which then predicts what the following character of text will be, given a starting character or set of characters.  The issue we found when building a model of this nature was that it led to generation of incoherent text, and text that often contained non-real or misspelled words.  We decided to opt for a slightly more complex method that would retain the relationship between words rather than just the relationship between local characters.  This method, we discovered, is known as word generation.  We then proceeded to build several models to attempt to find the best method to do so.<br><br>
+                </p>
+        </div>
+    </div>
+    </div> 
+</div>
+
+{% endblock content %}

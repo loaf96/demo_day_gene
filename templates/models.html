@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron mt-2">
+    <h1 class="display-5 text-md-center">Models</h1>
+    </div>
+
+    <div class="card-body">
+        <!-- <h5 class="card-title text-md-center">Model 3</h5> -->
+        <div id="scatter"></div>
+        </div>
+</div>
+<div class ="row">
+    <div class="col-md-3">
+        <div class="card-body">
+            <h2 class="text-center">Rap Model</h2>
+            <p class="text-center">
+                <ul>
+                    <li>Unique Words:  21067</li>
+                    <li>Sequence Length:  8</li>
+                    <li>Embedding Dimension: 128</li>
+                    <li>RNN Units:  512</li>
+                    <li>Batch Size:  3</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-body">
+            <h2 class="text-center">Grimm Model</h2>
+            <p class="text-center">
+                <ul>
+                    <li>Unique Words:  15278</li>
+                    <li>Sequence Length:  8</li>
+                    <li>Embedding Dimension: 128</li>
+                    <li>RNN Units:  512</li>
+                    <li>Batch Size:  1</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-body">
+            <h2 class="text-center">Alice Model</h2>
+            <p class="text-center">
+                <ul>
+                    <li>Unique Words:  6463</li>
+                    <li>Sequence Length:  8</li>
+                    <li>Embedding Dimension: 128</li>
+                    <li>RNN Units:  512</li>
+                    <li>Batch Size:  1</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-body">
+            <h2 class="text-center">Freud Model</h2>
+            <p class="text-center">
+                <ul>
+                    <li>Unique Words:  11554</li>
+                    <li>Sequence Length:  8</li>
+                    <li>Embedding Dimension: 128</li>
+                    <li>RNN Units:  512</li>
+                    <li>Batch Size:  1</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{{ url_for('static', filename='js/graph1.js') }}"></script>
+
+{% endblock content %}

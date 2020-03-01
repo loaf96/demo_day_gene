@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="jumbotron mt-2">
+    <form method="POST", action="/output">
+      <div class="form-group">
+      <ul class="list-group" id="filters">
+        <li class="filter list-group-item">
+          <label for="text1">Enter A Text Seed</label>
+          <input name="text1" type="text" class="form-control" placeholder="Enter a text seed">
+          <br>
+          <label for="type1">Choose a Style</label>
+          <select name="type1" class="form-control">
+            <option value="freud">Freud - Dream Psychology</option>
+            <option value="grimm">Grimm's Fairy Tales</option>
+            <option value="alice">Alice in Wonderland</option>
+            <option value="rap">***WARNING EXPLICIT*** Rap Lyrics  ***WARNING EXPLICIT***</option>
+          </select>
+        </li>
+      </ul>
+      <p>
+      <div id="output"></div>
+      </p>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% if output %}
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Generated Text -- {{ type1 }}</h5>
+        <p class="card-text">{{ output }}</p>
+    </div>
+  </div>
+
+  {% endif %}
+  </div>
+</div>
+
+{% endblock content %}

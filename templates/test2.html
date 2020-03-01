@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="container">
+    <div class="row">
+      <div class="col-1"></div>
+            <div class="col-6">
+                <div class="jumbotron">
+                        <div class="form-group">
+                                <ul class="list-group" id="filters">
+                                  <li class="filter list-group-item">
+                                    <label for="date">Enter A Text Sample</label>
+                                    <input class="form-control" id="text1" type="text" placeholder="Enter a text seed">
+                                  </li>
+                                </ul>
+                                <p>
+                                  <div id="output"></div>
+                                  <form method="POST" action="">
+                                    {{ form.hidden_tag() }}
+                                    <fieldset class="form-group">
+                                    <legend class="border-bottom mb-4">Test Now</legend>
+                                    <div class="form-group">
+                                      {{ form.testfield.label(class="form-control-label") }}
+
+                                      {% if form.testfield.errors %}
+                                        {{ form.testfield(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                          {% for error in form.testfield.errors %}
+                                            <span>{{ error }}</span>
+                                          {% endfor %}
+                                        </div>
+                                      {% else %}
+                                        {{ form.testfield(class="form-control form-control-lg") }} 
+                                      {% endif %}
+                                    </div>
+                                    </fieldset>
+                                    <div class="form-group">
+                                      {{ form.submit(class="btn btn-outline-info") }}
+                                    </div>
+                                  </form>
+                                </p>
+                              </div>
+            <div class="col">
+    </div>
+</div>
+    </div>
+</div>
+
+{% endblock content %}
